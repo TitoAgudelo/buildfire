@@ -1,17 +1,17 @@
-/* line 5, ../sass/main.scss */
+/* line 7, ../sass/main.scss */
 body {
   font-family: 'Barlow', sans-serif;
   padding: 10px;
   background-color: #fff;
 }
 
-/* line 12, ../sass/main.scss */
+/* line 14, ../sass/main.scss */
 .task.container {
   margin: 0 auto;
   max-width: 1200px;
   padding: 30px;
 }
-/* line 18, ../sass/main.scss */
+/* line 20, ../sass/main.scss */
 .task-head {
   align-items: center;
   border-bottom: 1px solid #F2B134;
@@ -21,12 +21,12 @@ body {
   margin-bottom: 2rem;
   padding: 2rem;
 }
-/* line 28, ../sass/main.scss */
+/* line 30, ../sass/main.scss */
 .task-title {
   font-size: 40px;
   text-transform: uppercase;
 }
-/* line 33, ../sass/main.scss */
+/* line 35, ../sass/main.scss */
 .task-button {
   background-color: #4FB99F;
   border: 0;
@@ -36,29 +36,76 @@ body {
   padding: 10px 15px;
   text-transform: uppercase;
 }
-/* line 43, ../sass/main.scss */
+/* line 45, ../sass/main.scss */
 .task-list {
   display: flex;
+  flex-wrap: wrap;
   margin: 2rem 0;
 }
-/* line 48, ../sass/main.scss */
+/* line 51, ../sass/main.scss */
 .task-card {
-  background-color: white;
-  padding: 10px;
+  background-color: #fff;
+  padding: 20px 10px 10px;
   margin: 15px;
-  border-radius: 10px;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  border-top-right-radius: 10px;
   box-shadow: 0 2px 24px 0 rgba(0, 0, 0, 0.1);
-  width: 25%;
+  position: relative;
+  width: 20%;
 }
-/* line 56, ../sass/main.scss */
+/* line 62, ../sass/main.scss */
 .task-card-image {
-  width: 160px;
+  width: 100%;
 }
-/* line 61, ../sass/main.scss */
-.task-late {
-  background-color: lightpink;
+/* line 66, ../sass/main.scss */
+.task-card-status {
+  align-items: center;
+  border-bottom: 1px solid #DFDDE5;
+  display: flex;
+  font-size: 20px;
+  margin-bottom: 10px;
+  padding-bottom: 10px;
+  text-transform: uppercase;
 }
-/* line 65, ../sass/main.scss */
-.task-completed {
+/* line 75, ../sass/main.scss */
+.task-card-status input {
+  height: 20px;
+  margin: 0 10px 0 0;
+  padding-top: 5px;
+  width: 20px;
+}
+/* line 83, ../sass/main.scss */
+.task-card-created, .task-card-due {
+  font-size: 10px;
+  font-weight: bold;
+  color: #112F41;
+}
+/* line 89, ../sass/main.scss */
+.task-card-description {
+  font-size: 12px;
+}
+/* line 95, ../sass/main.scss */
+.task-late:before {
+  background-color: #DD978D;
+  border-top-right-radius: 10px;
+  content: ' ';
+  display: block;
+  height: 5px;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+/* line 109, ../sass/main.scss */
+.task-completed:before {
   background-color: #4FB99F;
+  border-top-right-radius: 10px;
+  content: ' ';
+  display: block;
+  height: 5px;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
 }
