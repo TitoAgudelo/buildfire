@@ -1,0 +1,23 @@
+{
+  "name": "buildfire",
+  "version": "1.0.0",
+  "description": "Task creation app",
+  "main": "index.js",
+  "scripts": {
+    "start": "python -m SimpleHTTPServer 8000",
+    "styles": "compass compile",
+    "styles:watch": "compass watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/TitoAgudelo/buildfire.git"
+  },
+  "author": "Tito Agudelo",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/TitoAgudelo/buildfire/issues"
+  },
+  "homepage": "https://github.com/TitoAgudelo/buildfire#readme",
+  "dependencies": {
+  }
+}
