@@ -1,25 +1,68 @@
+$color-green: #4FB99F;
+$color-white: #fff;
+$color-yellow: #F2B134;
 
-body{
+body {
+    font-family: 'Barlow', sans-serif;
     padding: 10px;
-    background-color: whitesmoke;
+    background-color: $color-white;
 }
 
-.taskCard{
+.task {
+  &.container {
+    margin: 0 auto;
+    max-width: 1200px;
+    padding: 30px;
+  }
+
+  &-head {
+    align-items: center;
+    border-bottom: 1px solid $color-yellow;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    margin-bottom: 2rem;
+    padding: 2rem;
+  }
+
+  &-title {
+    font-size: 40px;
+    text-transform: uppercase;
+  }
+
+  &-button {
+    background-color: $color-green;
+    border: 0;
+    border-radius: 5px;
+    color: $color-white;
+    cursor: pointer;
+    padding: 10px 15px;
+    text-transform: uppercase;
+  }
+
+  &-list {
+    display: flex;
+    margin: 2rem 0;
+  }
+
+  &-card{
     background-color: white;
     padding: 10px;
-    margin-top: 15px;
+    margin: 15px;
     border-radius: 10px;
-    box-shadow: gray 2px 2px;
-}
+    box-shadow: 0 2px 24px 0 rgba(0,0,0,.1);
+    width: 25%;
 
-.taskLate{
-    background-color: lightpink !important;
-}
+    &-image {
+      width: 160px;
+    }
+  }
 
-.taskCompleted{
-    background-color: lightgreen !important;
-}
+  &-late {
+    background-color: lightpink;
+  }
 
-.taskCard >img{
-    width: 160px;
+  &-completed {
+    background-color: $color-green;
+  }
 }

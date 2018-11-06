@@ -5,19 +5,19 @@ function loadTasks(taskList){
 
     taskList.forEach((task,i)=>{
         let divTask = document.createElement('div');
-        divTask.className="taskCard";
+        divTask.className="task-card";
         divTask.innerHTML = `
-            ${task.img?"<img src='" + task.img + "' />":""}
-            <h4> <input type="checkbox" ${task.completed?"checked":""} title="check completed">  ${task.title + ' ' + i}</h4>
-            <span>created on ${task.createdOn} by ${task.createdBy}</span>
-            <p>${task.description}</p>
-            <span>Due on ${task.dueDate}</span>            
+            ${task.img?"<img class='task-card-image' src='" + task.img + "' />":""}
+            <h4 class='task-card-status'> <input type="checkbox" ${task.completed?"checked":""} title="check completed">  ${task.title + ' ' + i}</h4>
+            <span class='task-card-created'>created on ${task.createdOn} by ${task.createdBy}</span>
+            <p class='task-card-description'>${task.description}</p>
+            <span class='task-card-due'>Due on ${task.dueDate}</span>
         `;
 
         if(task.completed)
-            divTask.classList.add("taskCompleted");
+            divTask.classList.add("task-completed");
         else if(task.dueDate < Date.now() )
-            divTask.classList.add("taskLate");
+            divTask.classList.add("task-late");
 
 
         container.appendChild(divTask);
